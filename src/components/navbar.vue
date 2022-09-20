@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
@@ -21,60 +21,52 @@
       <a class="navbar-item">
         Documentation
       </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            About
+          </a>
+          <a class="navbar-item">
+            Jobs
+          </a>
+          <a class="navbar-item">
+            Contact
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-<!--           <a v-if="token != undefined" class="button is-primary is-light">
-            <router-link to="/">Logout</router-link>
-          </a> -->
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
           <a class="button is-light">
-            <router-link to="/about">About</router-link>
+            Log in
           </a>
         </div>
       </div>
     </div>
   </div>
   </nav>
-      
-  <router-view/>
-
 </template>
 
 <script>
-
-
 export default {
-  componentes: {},
-  data() {
-    return {
-      token: localStorage.getItem("token"),
-    }
-  },
+  name: "navbar-"
 }
 </script>
 
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-/* nav {
-  padding: 30px;
-} */
-
-nav a {
-  font-weight: bold;
-  color: #426a92;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
